@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+.nav {
+  grid-area: nav;
+  background-color: #10439f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  color: white;
+}
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+}
+.section {
+  grid-area: section;
+  background-color: gainsboro;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+.section select {
+  width: 95%;
+  padding: 5px;
+  border-radius: 5px;
+}
+.main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+.footer {
+  grid-area: footer;
+  background-color: #124076;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.footer-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 250px;
+  height: 250px;
+  border: 2px solid gainsboro;
+  border-radius: 10px;
+  padding: 10px;
+}
+.img {
+  background-image: url("../img/NAZ_d8246d685c544e69a111bfe3d274ea00.jpg");
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: deepskyblue;
+  color: whitesmoke;
+}
+.grid {
+  display: grid;
+  grid-template-areas:
+    "nav"
+    "section"
+    "main"
+    "footer";
+  height: 100vh;
+}
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.lista {
+  display: none;
+}
+@media (max-width: 576px) {
+  .none {
+    display: none;
+  }
+}
+@media (min-width: 576px) {
+  .grid {
+    grid-template-areas:
+      "nav section"
+      "nav main"
+      "footer main";
+    grid-template-columns: 12rem 1fr;
+    grid-template-rows: 6rem 1fr 6rem;
+  }
+  .grid-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+  }
+  .icono {
+    display: none;
+  }
+  .lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .lista ul {
+    list-style: none;
+  }
+  .nav {
+    flex-direction: column;
+    justify-content: start;
+    gap: 30px;
+  }
+}
